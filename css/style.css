@@ -1,0 +1,304 @@
+/* poppins-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/poppins-v23-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v23-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/*Глобальные стили*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+:root {
+    --dark-blue: #000842;
+    --blue: #0C21C1;
+    --purple: #3F378D;
+    --white: #fff;
+    --gray: #999;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* левая часть */
+.left-block {
+    width: 935px;
+    height: 1000px;
+    background-color: var(--dark-blue);
+    margin: 30px;
+    border-radius: 20px;
+    color: var(--white);
+}
+
+.header {
+    display: flex;
+    justify-content: end;
+    margin: 0 30px 0 0;
+    padding: 20px 20px 0 20px;
+    font-size: 18px;
+}
+
+.phone {
+    display: flex;
+}
+
+.logo {
+    opacity: 0;
+}
+
+.left-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 7rem ;
+}
+
+.girl {
+    margin: 80px 0 80px 185px;
+    width: 580px;
+    height: 580px;
+}
+
+.left-block__title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.left-block__text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* парвая часть */
+.right {
+    width: 720px;
+    margin: 110px 130px 120px 110px;
+}
+
+.right-title {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--purple);
+    margin-bottom: 1.3rem;
+}
+
+.form {
+    margin: 0;
+    width: 730px;
+}
+
+.span {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.email, .username, .password, .confrim {
+    margin-top: 50px;
+}
+
+.pole {
+    border-bottom: 2px solid var(--gray);
+    width: 600px;
+    padding: 15px;
+}
+
+.pole:focus {
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+label {
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.input-img {
+    margin: 10px 10px 10px 1px;
+    width: 1.2rem;
+}
+
+.pole::placeholder {
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 400px;
+    padding: 1rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 40px;
+    margin: 58px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    animation: button 3s ease-in-out infinite;
+}
+
+/* анимация */
+@keyframes button {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+    40%, 60% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* адаптация */
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .left-block {
+        margin: 30px;
+        width: 739px;
+        height: 859px;
+    }
+    .girl {
+        width: 520px;
+        height: 520px;
+        margin: 50px 0 50px 115px;
+    }
+    .right {
+        margin: 110px 130px 120px 110px;
+    }
+    .form {
+        width: 430px;
+    }
+    .email, .username, .password, .confrim {
+        margin-top: 42px;
+    }
+    .pole {
+        width: 430px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .container {
+        overflow-x: hidden;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0;
+    }
+    .left {
+        width: 100%;
+    }
+    .left-block {
+        margin: 0;
+        width: 380px;
+        height: 430px;
+    }
+    .logo {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .right {
+        width: 100%;
+        margin: 18px 26px 30px 26px;
+    }
+    .right-block {
+        text-wrap: none;
+    }
+    .right-title {
+        font-size: 28px;
+    }
+    .title-text {
+        font-size: 16px;
+    }
+    .left-block__phone {
+        font-size: 14px;
+    }
+    .left-block__title {
+        font-size: 24px;
+    }
+    .left-block__text {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    .left-text {
+        margin: 0;
+        margin-left: 80px;
+    }
+    .logo {
+        opacity: 1;
+        margin-bottom: 55px;
+    }
+    .form {
+        width: 100%;
+    }
+    .pole {
+        width: 300px;
+    }
+    .girl {
+        width: 250px;
+        height: 250px;
+        margin: 10px 0 10px 50px;
+    }
+    label {
+        font-size: 13px;
+    }
+    .pole::placeholder {
+        font-size: 13px;
+    }
+    .input-img {
+        width: 17px;
+    }
+    .eye {
+        width: 15px;
+    }
+    .button {
+        width: 320px;
+        padding: 1rem;
+        border-radius: 40px;
+        font-size: 17px;
+        margin: 58px 30px 0 15px;
+    }
+}
