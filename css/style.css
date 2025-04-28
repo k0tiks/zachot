@@ -61,17 +61,11 @@ body {
 }
 
 /* левая часть */
-.left {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
 .left-block {
-    width: 735px;
-    height: 859px;
+    width: 935px;
+    height: 1000px;
     background-color: var(--dark-blue);
-    margin: 2rem 0 1rem 2rem;
+    margin: 30px;
     border-radius: 20px;
     color: var(--white);
 }
@@ -81,6 +75,7 @@ body {
     justify-content: end;
     margin: 0 30px 0 0;
     padding: 20px 20px 0 20px;
+    font-size: 18px;
 }
 
 .phone {
@@ -98,7 +93,9 @@ body {
 }
 
 .girl {
-    margin: 50px 115px 55px 95px;
+    margin: 80px 0 80px 185px;
+    width: 580px;
+    height: 580px;
 }
 
 .left-block__title {
@@ -114,7 +111,7 @@ body {
 /* парвая часть */
 .right {
     width: 720px;
-    margin: 18px 130px 120px 110px;
+    margin: 110px 130px 120px 110px;
 }
 
 .right-title {
@@ -126,7 +123,7 @@ body {
 
 .form {
     margin: 0;
-    width: 430px;
+    width: 730px;
 }
 
 .span {
@@ -135,14 +132,13 @@ body {
 }
 
 .email, .username, .password, .confrim {
-    margin-top: 42px;
+    margin-top: 50px;
 }
 
 .pole {
     border-bottom: 2px solid var(--gray);
-    padding: 10px;
-    width: 430px;
-    padding: 10px;
+    width: 600px;
+    padding: 15px;
 }
 
 .pole:focus {
@@ -176,7 +172,7 @@ label {
     background-color: var(--dark-blue);
     color: var(--white);
     border-radius: 40px;
-    margin: 58px 30px;
+    margin: 58px 20px;
     font-size: 17px;
     font-weight: 500;
     animation: button 3s ease-in-out infinite;
@@ -199,6 +195,32 @@ label {
 }
 
 /* адаптация */
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .left-block {
+        margin: 30px;
+        width: 739px;
+        height: 859px;
+    }
+    .girl {
+        width: 520px;
+        height: 520px;
+        margin: 50px 0 50px 115px;
+    }
+    .right {
+        margin: 110px 130px 120px 110px;
+    }
+    .form {
+        width: 430px;
+    }
+    .email, .username, .password, .confrim {
+        margin-top: 42px;
+    }
+    .pole {
+        width: 430px;
+        padding: 10px;
+    }
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
     .container {
         overflow-x: hidden;
@@ -211,7 +233,6 @@ label {
     }
     .left-block {
         margin: 0;
-        margin-left: 20px;
         width: 380px;
         height: 430px;
     }
@@ -221,7 +242,7 @@ label {
     }
     .right {
         width: 100%;
-        margin-left: 26px;
+        margin: 18px 26px 30px 26px;
     }
     .right-block {
         text-wrap: none;
